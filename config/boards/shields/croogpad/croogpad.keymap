@@ -16,9 +16,6 @@
     status = "okay";
 };
 
-&encoder_2 {
-    status = "okay";
-};
 
 / {
     combos {
@@ -47,7 +44,7 @@
 
     sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&encoder_1 &encoder_2>;
+        sensors = <&encoder_1>;
     };
 
 
@@ -64,7 +61,7 @@
                 &mo 1            &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_ENTER
                 &kp BSPC         &kp KP_N0    &trans          &kp KP_DOT        &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN;
 
         };
 
@@ -78,7 +75,7 @@
                 &trans      &trans     &trans        &trans          &trans
                 &kp DEL        &trans     &trans        &trans          &trans
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN;
 
         };
     };
