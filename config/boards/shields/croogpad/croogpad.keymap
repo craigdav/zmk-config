@@ -12,7 +12,7 @@
 
 #define TIMEOUT 300
 
-&encoder_1 {
+&left_encoder {
     status = "okay";
 };
 
@@ -44,7 +44,7 @@
 
     sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&encoder_1>;
+        sensors = <&left_encoder>;
     };
 
 
